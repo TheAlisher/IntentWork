@@ -40,16 +40,6 @@ public class CalculatorActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == MAIN_ACTIVITY_CODE) {
-            if (requestCode == RESULT_OK) {
-                finish();
-            }
-        }
-    }
-
-    @Override
     protected void onStart() {
         super.onStart();
         Log.d("anim", "onStart");

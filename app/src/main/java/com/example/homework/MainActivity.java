@@ -1,5 +1,6 @@
 package com.example.homework;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -48,9 +49,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CalculatorActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, CALCULATOR_ACTIVITY_CODE);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == CALCULATOR_ACTIVITY_CODE) {
+            if (requestCode == RESULT_OK) {
+                finish();
+            }
+        }
     }
 }
 
