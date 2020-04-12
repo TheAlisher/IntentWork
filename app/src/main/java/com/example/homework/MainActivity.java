@@ -41,9 +41,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-
-
-
         Button toCalculator = findViewById(R.id.toCalculatorActivityButton);
         toCalculator.setOnClickListener(new View.OnClickListener() {
             @Override
